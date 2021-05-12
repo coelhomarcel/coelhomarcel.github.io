@@ -36,7 +36,7 @@ const events = {
   },
   '.card-montadoras': {
     'trigger': 'click',
-    'condition': window.location.pathname === '/analise',
+    'condition': window.location.pathname.startsWith('/analise'),
     'params': (element) =>  {
       return {
         'eventCategory': 'analise',
@@ -47,7 +47,7 @@ const events = {
   },
   '.contato input': {
     'trigger': 'change',
-    'condition': window.location.pathname === '/sobre',
+    'condition': window.location.pathname.startsWith('/sobre'),
     'params': (element) =>  {
       return {
         'eventCategory': 'contato',
@@ -59,7 +59,7 @@ const events = {
   'body .lightbox': {
     'trigger': 'transitionend',
     'triggerOnce': true,
-    'condition': window.location.pathname === '/sobre',
+    'condition': window.location.pathname.startsWith('/sobre'),
     'params': (element) =>  {
       return {
         'eventCategory': 'contato',
